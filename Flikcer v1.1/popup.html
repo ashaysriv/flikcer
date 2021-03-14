@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flikcer - Epileptic Content Detection</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+<section class="nav">
+    <div class="nav-container">
+        <a href="https://www.flikcerapp.com" target="_blank">
+            <img src="white-logo.png" class="navbar-logo">
+        </a>
+    </div>
+</section>
+<section class="s1">
+    <h1>Test current YouTube video for possible epileptic content.</h1>
+    <p>
+        Flikcer will tell you the number of possible epilepsy triggers, along with their timestamps in the video.
+    </p>
+    <div class="s1-main" id="s1-inputs">
+        <div class="button" id="url-button">
+            <h2>
+                TEST
+            </h2>
+            <img src="icons/arrow-forward-outline.svg"/>
+        </div>
+        <p class="hide" id="size-alert"> Youtube video too long. Try a shorter video.</p>
+        <div class="s1-steps hide">
+            <div class="step hide" id="step-1">
+                <div class="number">1</div>
+                <p>Reading YouTube URL</p>
+                <img class="hide" src="icons/checkmark-done-outline.svg"/><div class="loader"></div>
+            </div>
+            <div class="step hide" id="step-2">
+                <div class="number">2</div>
+                <p>Analysing Frames</p>
+                <img class="hide" src="icons/checkmark-done-outline.svg"/></ion-icon><div class="loader"></div>
+            </div>
+            <div class="step hide" id="step-3">
+                <div class="number">3</div>
+                <p>Detecting Possible Epilepsy Triggers</p>
+                <img class="hide" src="icons/checkmark-done-outline.svg"/></ion-icon><div class="loader"></div>
+            </div>
+        </div>
+    </div>
+    <div class="s1-main hide" id="s1-result">
+        <div class="result">
+            <h1>
+                Flikcer Found
+            </h1>
+            <div>64</div>
+            <h1>
+                Possible Epilepsy Triggers
+            </h1>
+        </div>
+        <div class="button hide" id="time-button">
+            <h2>
+                VIEW TIME STAMPS
+            </h2>
+            <img src="icons/chevron-down-outline.svg"/>
+        </div>
+        <div class="time-stamps hide">
+            <ul id="time-stamps-list">
+
+            </ul>
+        </div>
+<!--        <div class="button" id="iterations-button">-->
+<!--            <h2>-->
+<!--                CREATE SAFE VIDEO-->
+<!--            </h2>-->
+<!--            <img src="icons/chevron-down-outline.svg"/>-->
+<!--        </div>-->
+<!--        <div class="iteration hide">-->
+<!--            <h3>-->
+<!--                Select Number of Iterations-->
+<!--            </h3>-->
+<!--            <p>-->
+<!--                The amount of time taken will increase with increase in iterations.<br>-->
+<!--                The level of removal will increase with increase in iterations.-->
+<!--            </p>-->
+<!--            <div class="iteration-input">-->
+<!--                <input type="number" id="quantity" name="quantity" min="1" max="5">-->
+<!--                <div class="input-number-button"><img src="icons/checkmark-done-outline.svg"/></ion-icon><div class="loader-2"></div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="s1-steps hide">-->
+<!--                <div class="step hide" id="step-4">-->
+<!--                    <div class="number">1</div><p>Removing Dangerous Frames</p><img class="hide" src="icons/checkmark-done-outline.svg"/></ion-icon><div class="loader"></div>-->
+<!--                </div>-->
+<!--                <div class="step hide" id="step-5">-->
+<!--                    <div class="number">2</div><p>Creating Safe Video</p><img class="hide" src="icons/checkmark-done-outline.svg"/></ion-icon><div class="loader"></div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="button hide" id="download-button">-->
+<!--                <h2>-->
+<!--                    DOWNLOAD SAFE VIDEO-->
+<!--                </h2>-->
+<!--                <ion-icon name="cloud-download-outline"></ion-icon>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+</section>
+<section class="footer">
+    <div class="copyright-container">
+        <div>
+            <img src="icons/globe-outline.svg"/>
+            <a href="https://flikcerapp.com" target="_blank">Visit Website (Extended Features)</a>
+        </div>
+    </div>
+</section>
+<script src="popup.js"></script>
+</body>
+</html>
